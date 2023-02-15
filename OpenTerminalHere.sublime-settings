@@ -1,3 +1,14 @@
 {
-	"open-terminal-command": "",
+    "config": {
+        "linux": "gnome-terminal",
+        "osx": null,
+        "windows": "cmd"
+    },
+    // A list of available terminal emulators to open.
+    // "<cwd>" will be replaced with selected directory.
+    "available_terminals": {
+        "gnome-terminal": ["gnome-terminal", "--working-directory", "<cwd>"],
+        "zorin-light-term": ["exo-open", "--launch", "TerminalEmulator", "--working-directory", "<cwd>"],
+        "cmd": ["cmd.exe", "/d", "<cwd>"],
+    },
 }
