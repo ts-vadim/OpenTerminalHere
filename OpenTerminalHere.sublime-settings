@@ -1,6 +1,6 @@
 {
     "config": {
-        "linux": "zorin-light-term",
+        "linux": "gnome-terminal",
         "osx": "osx-term",
         "windows": "cmd"
     },
