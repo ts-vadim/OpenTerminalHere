@@ -1,14 +1,22 @@
 {
     "config": {
-        "linux": "gnome-terminal",
-        "osx": null,
+        "linux": "zorin-light-term",
+        "osx": "osx-term",
         "windows": "cmd"
     },
-    // A list of available terminal emulators to open.
-    // "<cwd>" will be replaced with selected directory.
-    "available_terminals": {
-        "gnome-terminal": ["gnome-terminal", "--working-directory", "<cwd>"],
-        "zorin-light-term": ["exo-open", "--launch", "TerminalEmulator", "--working-directory", "<cwd>"],
-        "cmd": ["cmd.exe", "/d", "<cwd>"],
+
+    /*
+		A list of commands to open terminals.
+
+		Special variable "$specified_folder" is added 
+		in addition to the standart variables (https://www.sublimetext.com/docs/build_systems.html#variables).
+    */
+    "commands": {
+        "test": "notify-send \"OpenTerminalHere\" \"It Works!\"",
+
+        "gnome-terminal": "gnome-terminal --working-directory ${specified_folder}",
+        "zorin-light-term": "exo-open --launch TerminalEmulator --working-directory ${specified_folder}",
+        "osx-term": "open -a Terminal ${specified_folder}",
+        "cmd": "cmd.exe /d ${specified_folder}",
     },
 }

@@ -1,0 +1,6 @@
+# Files
+*.sublime-project
+*.sublime-workspace
+install.sh
+
+# Folders
